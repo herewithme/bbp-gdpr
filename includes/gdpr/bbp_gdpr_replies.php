@@ -179,7 +179,15 @@ if ( ! class_exists( '\Boss\bbPress\GDPR\BBP_GDPR_Replies' ) ) {
 							wp_delete_post( $attachment->ID, true );
 						}
 					}
-					wp_delete_post( $reply->ID, true );
+
+					// wp_delete_post( $reply->ID, true );
+					// Hack
+					wp_update_post( array(
+						'ID'           => $reply->ID,
+						'post_author'  => 0,
+						'post_content' => "Ce message a été supprimé suite à la demande de l'auteur."
+					) );
+
 					$items_removed = true;
 				}
 			}

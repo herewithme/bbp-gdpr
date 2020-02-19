@@ -200,9 +200,6 @@ if ( ! class_exists( '\Boss\bbPress\Controller' ) ) :
 		}
 
 		public function init() {
-			global $boss_bbpress_gdpr_forums;
-			$boss_bbpress_gdpr_forums = new \Boss\bbPress\GDPR\BBP_GDPR_Forums();
-
 			global $boss_bbpress_gdpr_topics;
 			$boss_bbpress_gdpr_topics = new \Boss\bbPress\GDPR\BBP_GDPR_Topics();
 

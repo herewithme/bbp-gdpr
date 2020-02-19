@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: bbPress GDPR
+ * Plugin Name: bbPress GDPR (hacked for WPFR)
  * Description: GDPR support for bbPress
  * Author:      BuddyBoss
  * Author URI:  https://www.buddyboss.com
