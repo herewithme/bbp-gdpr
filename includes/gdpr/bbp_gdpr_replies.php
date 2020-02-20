@@ -180,11 +180,14 @@ if ( ! class_exists( '\Boss\bbPress\GDPR\BBP_GDPR_Replies' ) ) {
 						}
 					}
 
+					$default_author_id = defined( 'BBP_GDPR_DEFAULT_USER' ) ? 'BBP_GDPR_DEFAULT_USER' : 0;
+
 					// wp_delete_post( $reply->ID, true );
+
 					// Hack
 					wp_update_post( array(
 						'ID'           => $reply->ID,
-						'post_author'  => 0,
+						'post_author'  => (int) $default_author_id,
 						'post_content' => "Ce message a été supprimé suite à la demande de l'auteur."
 					) );
 
